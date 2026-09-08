@@ -1,0 +1,6 @@
+{
+  "name": "ชีววิทยาพัฒนาการ: กระบวนการและกลไก (Developmental Biology)",
+  "description": "แพลตฟอร์มการเรียนรู้และสำรวจชีววิทยาพัฒนาการแบบมีปฏิสัมพันธ์ กลไกการเจริญเติบโตของเซลล์ การสร้างอวัยวะ การควบคุมทางพันธุกรรม และระบบ AI วิเคราะห์เซลล์ตัวอ่อน",
+  "requestFramePermissions": ["microphone"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

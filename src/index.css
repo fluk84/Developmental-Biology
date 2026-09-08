@@ -1,0 +1,97 @@
+@import "tailwindcss";
+
+:root {
+  font-family: 'Prompt', 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+}
+
+/* Custom smooth scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(148, 163, 184, 0.35);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(148, 163, 184, 0.6);
+}
+
+/* Print-Friendly On-Screen Mode */
+.print-friendly-theme {
+  background-color: #f8fafc !important;
+  color: #0f172a !important;
+}
+
+.print-friendly-theme .bg-slate-900,
+.print-friendly-theme .bg-slate-950,
+.print-friendly-theme .dark\:bg-slate-900,
+.print-friendly-theme .dark\:bg-slate-950 {
+  background-color: #ffffff !important;
+  color: #0f172a !important;
+}
+
+.print-friendly-theme .border-slate-800,
+.print-friendly-theme .dark\:border-slate-800 {
+  border-color: #cbd5e1 !important;
+}
+
+/* Native Print Styles (@media print) */
+@media print {
+  @page {
+    size: A4 portrait;
+    margin: 12mm 15mm 15mm 15mm;
+  }
+
+  body {
+    background-color: #ffffff !important;
+    color: #0f172a !important;
+    font-size: 11pt !important;
+    line-height: 1.5 !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  /* Hide interactive UI elements during print */
+  header,
+  nav,
+  footer,
+  button:not(.print-keep),
+  .no-print,
+  #nav-btn-chat,
+  #nav-btn-darkmode,
+  [role="dialog"]:not(.print-modal-active),
+  .floating-action-btn {
+    display: none !important;
+  }
+
+  /* Container adjustments for clean print layout */
+  .printable-document-container {
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    background: #ffffff !important;
+    color: #0f172a !important;
+  }
+
+  .print-page-break {
+    page-break-before: always;
+    break-before: page;
+  }
+
+  .print-avoid-break {
+    page-break-inside: avoid !important;
+    break-inside: avoid !important;
+  }
+
+  /* Force borders and clean text contrast */
+  .print-border {
+    border: 1px solid #cbd5e1 !important;
+  }
+}
+
